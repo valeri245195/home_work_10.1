@@ -27,19 +27,11 @@ class Record:
 
     def add_phone(self, phone):
         self.phones.append(Phone(phone))
-        print(str(phone))
 
     def remove_phone(self, phone):
-        print(type(self.phones))
-        print(type(phone))
-        print(self.phones)
-        print(list(self.phones))
-        print(phone)
-
         try:
             for p in self.phones:
                 if str(p) == phone:
-                    print('сработало')
                     self.phones.remove(p)
         except:
             pass
@@ -83,29 +75,3 @@ class AddressBook(UserDict):
             del self.data[name]
         except:
             pass
-
-# Створення нової адресної книги
-
-# book = AddressBook()
-#
-# # Створення запису для John
-# john_record = Record("John")
-# print(john_record, 'qweqweqweqweqweqwe')
-# print(type(john_record))
-# john_record.add_phone("12345")
-# john_record.add_phone("5555555555")
-#
-# # Додавання запису John до адресної книги
-# book.add_record(john_record)
-# print(book)
-# jane_record = Record("Jane")
-# jane_record.add_phone("9876543210")
-# book.add_record(jane_record)
-# for name, record in book.data.items():
-#     print(record)
-#
-#
-# john = book.find("John")
-#
-# john.edit_phone("1234567890", "1112223333")
-# print(john, 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa')
